@@ -45,7 +45,7 @@ bonus:  $(OBJ) $(BONUS_OBJ)
 		@echo ""
 		@echo "$(LIGHTPURPLE)	[	compilation bonus	]$(RESET)"
 		@echo ""
-		ar rcs $(NAME) $(OBJS) $(BONUS_OBJ)
+		ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 clean:
 		@echo ""
 		@echo "$(PURPLE)	[	cleaning	]$(RESET)"
