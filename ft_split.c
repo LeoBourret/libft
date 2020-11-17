@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lebourre <lebourre@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/16 18:23:30 by lebourre          #+#    #+#             */
+/*   Updated: 2020/11/16 18:27:38 by lebourre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int		is_charset(char c, char charset)
 {
 	if (c == charset)
-			return (1);
+		return (1);
 	return (0);
 }
 
@@ -42,7 +54,7 @@ int		how_many_words(char const *str, char charset)
 		if (!is_charset(str[i], charset)
 		&& (is_charset(str[i + 1], charset) || str[i + 1] == '\0'))
 			words++;
-return (words);
+	return (words);
 }
 
 char	**ft_split(char const *s, char c)
