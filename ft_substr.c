@@ -6,7 +6,7 @@
 /*   By: lebourre <lebourre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:24:08 by lebourre          #+#    #+#             */
-/*   Updated: 2020/11/17 18:50:13 by lebourre         ###   ########.fr       */
+/*   Updated: 2020/11/17 20:20:27 by lebourre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	size;
 
-	if (!(new = malloc(sizeof(char))))
-		return (NULL);
-	new[0] = 0;
 	if (start >= ft_strlen(s) || !s)
+	{
+		if (!(new = malloc(sizeof(char))))
+			return (NULL);
+		new[0] = 0;
 		return (new);
+	}
 	size = ft_strlen(&s[start]);
 	if (size < len)
 		len = size;
