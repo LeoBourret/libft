@@ -6,7 +6,7 @@
 /*   By: lebourre <lebourre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:24:00 by lebourre          #+#    #+#             */
-/*   Updated: 2020/11/16 18:24:01 by lebourre         ###   ########.fr       */
+/*   Updated: 2020/11/17 18:19:40 by lebourre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 		if (s2[j] == 0)
 			return ((char*)&s1[i]);
 	}
-	return (NULL);
+	return ((char*)s1);
 }
