@@ -6,7 +6,7 @@
 /*   By: lebourre <lebourre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:23:30 by lebourre          #+#    #+#             */
-/*   Updated: 2020/11/17 19:14:02 by lebourre         ###   ########.fr       */
+/*   Updated: 2020/11/17 20:17:48 by lebourre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,12 @@ char	*ft_strdup_split(char const *str, char charset)
 	char	*new_str;
 
 	size = ft_strlen_split(str, charset);
-	new_str = malloc(sizeof(char *) * size + 1);
+	if (!(new_str = malloc(sizeof(char *) * size + 1)))
+		return (NULL);
 	i = -1;
 	while (++i < size)
 		new_str[i] = str[i];
+	new_str[i] = '\0';
 	return (new_str);
 }
 
