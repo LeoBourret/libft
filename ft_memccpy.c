@@ -6,7 +6,7 @@
 /*   By: lebourre <lebourre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:22:44 by lebourre          #+#    #+#             */
-/*   Updated: 2020/11/16 18:22:45 by lebourre         ###   ########.fr       */
+/*   Updated: 2020/11/17 17:09:42 by lebourre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	size_t	i;
-	char	*ptr_s;
-	char	*ptr_d;
+	size_t			i;
+	unsigned char	*ptr_s;
+	unsigned char	*ptr_d;
 
-	ptr_s = (char *)src;
-	ptr_d = (char *)dest;
+	ptr_s = (unsigned char *)src;
+	ptr_d = (unsigned char *)dest;
 	i = -1;
 	while (++i < n && ptr_s[i] != c)
 		ptr_d[i] = ptr_s[i];
