@@ -6,7 +6,7 @@
 /*   By: lebourre <lebourre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:24:00 by lebourre          #+#    #+#             */
-/*   Updated: 2020/11/17 18:27:44 by lebourre         ###   ########.fr       */
+/*   Updated: 2020/11/17 20:06:19 by lebourre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 
 	i = -1;
 	if (len == 0)
-		return ((char*)s1);
+		return (NULL);
 	while (s1[++i] && i < len)
 	{
 		j = 0;
