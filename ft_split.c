@@ -6,7 +6,7 @@
 /*   By: lebourre <lebourre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:23:30 by lebourre          #+#    #+#             */
-/*   Updated: 2020/11/16 18:27:38 by lebourre         ###   ########.fr       */
+/*   Updated: 2020/11/17 17:11:07 by lebourre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,6 @@ char	**ft_split(char const *s, char c)
 		while (!is_charset(s[j], c) && s[j])
 			j++;
 	}
-	res[i] = '\0';
+	res[i] = NULL;
 	return (res);
 }
