@@ -6,15 +6,15 @@
 /*   By: lebourre <lebourre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:22:00 by lebourre          #+#    #+#             */
-/*   Updated: 2020/11/19 14:52:32 by lebourre         ###   ########.fr       */
+/*   Updated: 2020/11/21 23:54:02 by lebourre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_len(long nb)
+static size_t	ft_len(long nb)
 {
-	int len;
+	size_t len;
 
 	len = 0;
 	if (nb <= 0)
@@ -32,9 +32,9 @@ static int		ft_len(long nb)
 
 char			*ft_itoa(int n)
 {
-	long	nbr;
-	int		len;
-	char	*res;
+	long		nbr;
+	size_t		len;
+	char		*res;
 
 	len = ft_len(n);
 	if (!(res = malloc(sizeof(char) * len + 1)))

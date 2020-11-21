@@ -6,7 +6,7 @@
 /*   By: lebourre <lebourre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:21:33 by lebourre          #+#    #+#             */
-/*   Updated: 2020/11/16 18:21:35 by lebourre         ###   ########.fr       */
+/*   Updated: 2020/11/21 23:52:41 by lebourre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
+	long i;
 
 	i = -1;
-	while (++i < n)
+	while (++i < (long)n)
 		((char*)s)[i] = '\0';
 }
