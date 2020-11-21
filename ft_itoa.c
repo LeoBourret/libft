@@ -6,13 +6,13 @@
 /*   By: lebourre <lebourre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:22:00 by lebourre          #+#    #+#             */
-/*   Updated: 2020/11/16 18:22:01 by lebourre         ###   ########.fr       */
+/*   Updated: 2020/11/19 14:52:32 by lebourre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_len(long nb)
+static int		ft_len(long nb)
 {
 	int len;
 
@@ -30,7 +30,7 @@ int		ft_len(long nb)
 	return (len);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	long	nbr;
 	int		len;

@@ -6,7 +6,7 @@
 /*   By: lebourre <lebourre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 15:04:01 by lebourre          #+#    #+#             */
-/*   Updated: 2020/11/18 15:08:57 by lebourre         ###   ########.fr       */
+/*   Updated: 2020/11/19 14:59:08 by lebourre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,9 @@ void			*ft_memset(void *s, int c, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void			*ft_memmove(void *dest, const void *src, size_t n);
-void			ft_putchar(char c);
 void			ft_putchar_fd(char c, int fd);
-void			ft_putstr(char *str);
 void			ft_putstr_fd(char *str, int fd);
 void			ft_putendl_fd(char *s, int fd);
-void			ft_putnbr(int n);
 void			ft_putnbr_fd(int n, int fd);
 int				ft_atoi(const char *s);
 int				ft_isalpha(int c);
@@ -50,7 +47,6 @@ size_t			ft_strlen(char const *s);
 char			*ft_strdup(const char *s);
 char			*ft_strchr(char const *s, int c);
 char			*ft_strrchr(char const *s, int c);
-char			*ft_strcpy(char *dest, char const *src);
 char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));

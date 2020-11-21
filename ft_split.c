@@ -6,20 +6,20 @@
 /*   By: lebourre <lebourre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:23:30 by lebourre          #+#    #+#             */
-/*   Updated: 2020/11/17 20:17:48 by lebourre         ###   ########.fr       */
+/*   Updated: 2020/11/19 14:52:54 by lebourre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_charset(char c, char charset)
+static int		is_charset(char c, char charset)
 {
 	if (c == charset)
 		return (1);
 	return (0);
 }
 
-int		ft_strlen_split(char const *str, char charset)
+static int		ft_strlen_split(char const *str, char charset)
 {
 	int i;
 
@@ -29,7 +29,7 @@ int		ft_strlen_split(char const *str, char charset)
 	return (i);
 }
 
-char	*ft_strdup_split(char const *str, char charset)
+static char		*ft_strdup_split(char const *str, char charset)
 {
 	int		i;
 	int		size;
@@ -45,7 +45,7 @@ char	*ft_strdup_split(char const *str, char charset)
 	return (new_str);
 }
 
-int		how_many_words(char const *str, char charset)
+static int		how_many_words(char const *str, char charset)
 {
 	int words;
 	int i;
@@ -59,7 +59,7 @@ int		how_many_words(char const *str, char charset)
 	return (words);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	**res;
 	int		words_number;
