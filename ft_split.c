@@ -6,81 +6,75 @@
 /*   By: lebourre <lebourre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:23:30 by lebourre          #+#    #+#             */
-/*   Updated: 2020/11/19 14:52:54 by lebourre         ###   ########.fr       */
+/*   Updated: 2020/11/21 22:01:31 by lebourre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		is_charset(char c, char charset)
-{
-	if (c == charset)
-		return (1);
-	return (0);
-}
-
-static int		ft_strlen_split(char const *str, char charset)
+static int		ft_strlen_split(char *str, char c)
 {
 	int i;
 
 	i = 0;
-	while (str[i] && !is_charset(str[i], charset))
+	while (str[i] && str[i] != c)
 		i++;
 	return (i);
 }
 
-static char		*ft_strdup_split(char const *str, char charset)
+static int		how_many_words(char *str, char c)
 {
-	int		i;
-	int		size;
-	char	*new_str;
+	int	words;
+	int	i;
 
-	size = ft_strlen_split(str, charset);
-	if (!(new_str = malloc(sizeof(char *) * size + 1)))
-		return (NULL);
-	i = -1;
-	while (++i < size)
-		new_str[i] = str[i];
-	new_str[i] = '\0';
-	return (new_str);
-}
-
-static int		how_many_words(char const *str, char charset)
-{
-	int words;
-	int i;
-
-	i = -1;
 	words = 0;
+	i = -1;
 	while (str[++i])
-		if (!is_charset(str[i], charset)
-		&& (is_charset(str[i + 1], charset) || str[i + 1] == '\0'))
+		if (str[i] != c
+		&& ((str[i + 1] == c) || str[i + 1] == '\0'))
 			words++;
 	return (words);
 }
 
-char			**ft_split(char const *s, char c)
+static char		*ft_strdup_split(char *str, char c)
 {
-	char	**res;
-	int		words_number;
+	char	*new;
+	int		i;
+
+	if (!(new = malloc(sizeof(char) * ft_strlen_split(str, c) + 1)))
+		return (0);
+	i = 0;
+	while (str[i] && (str[i] != c))
+	{
+		new[i] = str[i];
+		i++;
+	}
+	new[i] = '\0';
+	return (new);
+}
+
+char			**ft_split(const char *str, char c)
+{
 	int		i;
 	int		j;
+	int		words;
+	char	**ret;
 
-	if (s == 0 || c == 0)
+	i = 0;
+	j = -1;
+	words = how_many_words((char *)str, c);
+	if (!str)
 		return (NULL);
-	words_number = how_many_words(s, c);
-	if (!(res = malloc(sizeof(char *) * words_number + 1)))
-		return (NULL);
-	i = -1;
-	j = 0;
-	while (++i < words_number)
+	if (!(ret = malloc(sizeof(char *) * (words + 1))))
+		return (0);
+	while (++j < words)
 	{
-		while (is_charset(s[j], c) && s[j])
-			j++;
-		res[i] = ft_strdup_split(&s[j], c);
-		while (!is_charset(s[j], c) && s[j])
-			j++;
+		while ((str[i] == c) && str[i])
+			i++;
+		ret[j] = ft_strdup_split((char *)&str[i], c);
+		while ((str[i] != c) && str[i])
+			i++;
 	}
-	res[i] = NULL;
-	return (res);
+	ret[j] = NULL;
+	return (ret);
 }
