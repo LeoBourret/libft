@@ -1,25 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_realloc_double.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lebourre <lebourre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 18:22:15 by lebourre          #+#    #+#             */
-/*   Updated: 2021/01/08 10:36:21 by lebourre         ###   ########.fr       */
+/*   Created: 2021/02/03 10:41:01 by lebourre          #+#    #+#             */
+/*   Updated: 2021/02/16 10:33:03 by lebourre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+char	**ft_realloc_double(char **str)
 {
-	t_list *tmp;
+	char	**new;
+	int		i;
 
-	while (*lst)
+	if (!str)
 	{
-		tmp = *lst;
-		*lst = (*lst)->next;
-		(*del)(tmp);
+		if (!(new = malloc(sizeof(char *) * 2)))
+			return (NULL);
+		new[1] = NULL;
+		return (new);
 	}
+	i = 0;
+	while (str[i])
+		i++;
+	if (!(new = malloc(sizeof(char *) * (i + 2))))
+		return (NULL);
+	i = -1;
+	while (str[++i])
+	{
+		new[i] = ft_strdup(str[i]);
+		free(str[i]);
+	}
+	new[i + 1] = NULL;
+	free(str);
+	return (new);
 }

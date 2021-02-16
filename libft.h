@@ -6,7 +6,7 @@
 /*   By: lebourre <lebourre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 15:04:01 by lebourre          #+#    #+#             */
-/*   Updated: 2020/11/19 14:59:08 by lebourre         ###   ########.fr       */
+/*   Updated: 2021/02/03 10:45:51 by lebourre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ typedef struct	s_list
 
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t data_ammount, size_t size);
+char			*ft_realloc(char *str, int buffer_size);
+char			**ft_realloc_double(char **str);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
 void			*ft_memset(void *s, int c, size_t n);
