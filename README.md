@@ -3,7 +3,7 @@
 ![Language: C](https://img.shields.io/badge/Language-C-blue.svg)
 ![Build: Makefile](https://img.shields.io/badge/Build-Makefile-green.svg)
 ![School: 42 Paris](https://img.shields.io/badge/School-42_Paris-orange.svg)
-![Grade: 115/100](https://img.shields.io/badge/Grade-125/100-brightgreen.svg)
+![Grade: 115/100](https://img.shields.io/badge/Grade-115/100-brightgreen.svg)
 
 ## ✨ Overview
 
