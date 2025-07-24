@@ -7,7 +7,7 @@
 
 ## ✨ Overview
 
-`Libft` is one of the very first projects at 42 Paris, serving as a cornerstone for learning C programming fundamentals. The goal was to **reimplement a set of standard C library functions**, along with some additional utility functions, demonstrating a deep understanding of memory management, string manipulation, and type handling without relying on the original libc.
+`Libft` is the very first projects at 42 Paris, serving as a cornerstone for learning C programming fundamentals. The goal was to **reimplement a set of standard C library functions**, along with some additional utility functions, demonstrating a deep understanding of memory management, string manipulation, and type handling without relying on the original libc.
 
 This project was crucial for building a strong foundation in C and developing rigorous coding practices.
 
