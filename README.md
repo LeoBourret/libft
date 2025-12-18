@@ -48,7 +48,6 @@ The `Libft` project is divided into three main categories of functions:
 *   `ft_split`: Splits a string by a delimiter into an array of strings.
 *   `ft_itoa`: Converts an integer to an ASCII string.
 *   `ft_strmapi`: Applies a function to each character of a string to create a new one.
-*   `ft_striteri`: Applies a function to each character of a string.
 *   `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd`: Functions to write characters/strings/numbers to a file descriptor.
 
 ### **3. Linked List Functions (Bonus Part)**
